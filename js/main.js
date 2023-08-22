@@ -67,7 +67,7 @@ for (let i of bank) {
   for (let k of i.expensesPerYear) {
     expenses_per_month += k.total / 12;
   }
-  i.procent = (expenses_per_month / i.budget) * 100;
+  i.procent = (expenses_per_month / i.budget) * 100 + "%";
 
   // 2. Вычитав все расходы включая налоги определить куда пушается компания в уд или не удачные если денег остается больше 0 то в уд меньше (не удачные)
 
@@ -77,6 +77,7 @@ for (let i of bank) {
     neudachniye.push(i);
   }
 }
+console.log(`Процент!`);
 console.log(bank);
 console.log(`Успешные!`);
 console.log(udachniye);
